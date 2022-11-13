@@ -1,0 +1,365 @@
+<html lang="pt-BR"> 
+<head> 
+	<title>Desenvolvimento de landing page de e-commerce com cms" </title> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="author" content="Angelo Dias"> 
+	<meta name="description" content="Desenvolvimento de landing page de e-commerce com cms"> 
+<style> 
+@import 
+url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); * { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+a { 
+	text-decoration: none; 
+	outline: none; 
+} 
+:root {
+	--color-text: #f1f1f1;
+	--color-subtitle: #dfd9d9;
+	--color-highlight: #e2792d;
+	--color-button: #4343e9; 
+}
+body { 
+	font-family: 'Poppins', sans-serif; 
+	background: url(fundo_site-svg.jpg) no-repeat fixed center; 
+	color: var(--color-text); 
+	max-width: 1080px; 
+	margin: 0 auto; 
+}
+.container { 
+	padding: 20px; 
+}
+header { 
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+	background-color: rgb(255, 161, 37); 
+}
+header .logo img {
+ 
+	width: 100px; 
+	height: 100px; 
+	filter: drop-shadow(30px 10px 4px rgb(0, 0, 0, 0.5)); 
+}
+header ul { 
+	display: flex; 
+	gap: 30px; 
+	list-style: none; 
+}
+header ul li { 
+	font-size: 16px; 
+}
+header ul li a { 
+	text-decoration: none; 
+	color: var(--color-text); 
+	transition: 0.5s; 
+}
+header ul li a:hover { 
+	color: var(--color-highlight); 
+	border-bottom: 1px solid var(--color-button); 
+}
+button { 
+	border: none; 
+	background-color: var(--color-button); 
+	color: var(--color-text); 
+	padding: 12px 30px; 
+	border-radius: 10px; 
+	font-size: 16px; 
+	transition: 0.5s; 
+}
+button a { 
+	color: var(--color-text); 
+	font-weight: 500; 
+}
+button:hover { 
+	filter: drop-shadow(0px 2px 3px rgb(0, 0, 0, 0.5)); 
+}
+main { 
+padding-top: 200px; 
+max-width: 1000px;
+ 
+	display: flex; 
+	flex-direction: column; 
+	margin: 0 auto; 
+}
+.top-main { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	text-align: center; 
+}
+.top-main h3 { 
+	padding-top: 30px; 
+	color: var(--color-subtitle); 
+	font-weight: 400; 
+	font-size: 15px; 
+}
+.title h3{ 
+	display: flex; 
+	margin: 0 auto; 
+	max-width: 65%; 
+}
+.bottom-main { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	padding-top: 50px; 
+}
+.search { 
+	background-color: var(--color-text); 
+	opacity: 0.9; 
+	border-radius: 15px; 
+	width: 80%; 
+	padding: 25px; 
+	display: flex; 
+	justify-content: space-evenly; 
+}
+label { 
+	color: #000; 
+}
+#locations, #hotel, #range { 
+	display: flex;
+ 
+	flex-direction: column; 
+}
+label { 
+	padding-bottom: 10px; 
+	display: flex; 
+	align-items: flex-start; 
+}
+select { 
+	border: none; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	height: 25px; 
+}
+.button-search { 
+	padding-left: 20px; 
+}
+#button-search { 
+	padding: 30px; 
+	opacity: 0.8; 
+}
+button:hover { 
+	cursor: pointer; 
+}
+button img { 
+	width: 50px; 
+	height: 50px; 
+}
+/* Formulário */ 
+#formulario { 
+	display: flex; 
+	margin-top: 80px; 
+} 
+#formulario form { 
+	width: 450px; 
+	height: 550px; 
+	margin: auto auto; 
+	padding: 15px; 
+	background-color: rgba(255, 255, 255, 0.616); 
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px-8px;
+ 
+	text-align: center; 
+	border-radius: 10px; 
+} 
+#formulario form h2{ 
+	text-align: center; 
+	font-size: 28px; 
+	font-weight: bold; 
+	color: #f77b7b; 
+	margin-bottom: 1px; 
+} 
+#formulario form label { 
+	padding-bottom: 0px; 
+	} 
+#formulario form input{ 
+	width: 100%; 
+	padding: 15px; 
+	border: none; 
+	outline: none; 
+	margin: 5px auto; 
+	border-radius: 5px; 
+} 
+#formulario form button{ 
+	padding: 5px; 
+	width: 200px; 
+	border: none; 
+	border-radius: 5px; 
+	background-color: dodgerblue; 
+	cursor: pointer; 
+	margin-top: 15px; 
+}
+/*Rodapé*/ 
+#rodape{ 
+	background-color: var(--cor1); 
+	padding: 10px; 
+	margin-top: 40px; 
+}
+/*Rodapé > container*/ 
+.container-rodape{ 
+	text-align: center; 
+}
+/*Tooltips*/ 
+.container-rodape > a{ 
+	color: var(--cor3); 
+}
+ 
+/*Título rodapé*/ 
+.container-rodape > h2{ 
+	font-size: 1.4em; 
+	color: var(--cor3); 
+	margin-top: 15px; 
+}
+@media screen and (max-width: 700px) { 
+	header { 
+	display: flex; 
+	flex-direction: column; 
+	}
+header img { 
+	display: none; 
+}
+header .menu { 
+	color: #4343e9; 
+} 
+main { 
+	padding-top: 100px; 
+}
+.search { 
+	display: flex; 
+	flex-direction: column; 
+	padding-top: 0; 
+}
+label { 
+	padding-top: 20px; 
+}
+.bottom-main { 
+	display: flex; 
+	flex-direction: column; 
+	width: 100%; 
+}
+.button-search { 
+	padding-top: 20px; 
+}
+#button-search { 
+display: flex; 
+align-items: center;
+ 
+	justify-content: center; 
+	padding: 20px 80px; 
+}
+#button-search::after { 
+	content: 'Pesquisar'; 
+}
+	#button-search img { 
+	margin-right: 20px; 
+	width: 45px; 
+	height: 45px; 
+	} 
+}
+</style> 
+<script> 
+	//capturar a data atual para preencher o campo de data da viagem 	function carrega_data_corrente() { 
+	var currentDate = new Date() 
+	var day = currentDate.getDate(); 
+	var month = currentDate.getMonth() + 1; 
+	var year = currentDate.getFullYear(); 
+	var my_date = year+"-"+month+"-"+day; 
+	document.getElementById("local_date").value=my_date; 
+	} 
+</script>
+</head> 
+<body  onload="return carrega_data_corrente();">
+<div class="container"> 
+	<header> 
+	<div class="logo"> 
+	<img src="logo_plane.svg" alt=""> 
+	</div>
+<div class="menu"> 
+	<ul> 
+	<li><a href="#">Home</a></li> 
+	<li><a href="#">Sobre</a></li> 
+	<li><a href="#">Pacotes</a></li> 
+	<li><a href="#">Contate-nos</a></li> 
+	<li><a href="#">FAQ</a></li> 
+	</ul> 
+</div>
+<div class="button">
+ 
+	<button> 
+	<a href="#">Cadastre-se</a> 
+	</button> 
+	</div> 
+</header>
+<main> 
+	<div class="top-main"> 
+	<div class="title"> 
+	<h1> 
+	Tenha o melhor Réveillon onde quiser.
+</h1>
+<h3> 
+	Fazendo do mundo seu playground.
+	Com o cartão Decolar Santander, você acumula pontos nas suas compras do dia a dia para trocar pela sua próxima viagem.
+	</h3> 
+	</div> 
+</div>
+<div class="bottom-main"> 
+	<div class="search"> 
+	<div id="locations"> 
+	<label for="local_destino">Destino</label> 
+	<select name="local_destino" id=""> 
+	<option value="PR">Curitiba</option> 
+	<option value="DF">Brasília</option> 
+	<option value="CE">Fortaleza</option> 
+	<option value="RN">Natal</option> 
+	<option value="RS">Porto Alegre</option> 
+	</select> 
+	</div>
+<div id="hotel"> 
+	<label for="local_hotel">Hotel</label> 
+	<select name="local_hotel" id=""> 
+	<option value="1">Grand Mercure Curitiba Rayon</option> 
+	<option value="2">Hotel Windsor Brasília</option> 
+	<option value="3">Vila Galé Fortaleza</option> 
+	<option value="4">Natal Dunnas Hotel</option> 
+	<option value="5">Quality Porto Alegre</option> 
+	</select> 
+</div>
+<div id="range"> 
+	<label for="local_date">Período</label>
+ 
+	<input placeholder="11/11/2022" id="local_date" type="date" value="2022-11-11"> 
+	</div> 
+	</div>
+<div class="button-search"> 
+	<button id="button-search"> 
+	<img src="icon-search.svg" alt="" srcset=""> 
+	</button> 
+</div>
+</div>
+	<div id="formulario" class="right"> 
+	<form> 
+	<h2>Crie seu pacote, deixe seu contato</h2> 
+	<label>Nome</label><br> 
+	<input type="text" id="Nome" placeholder="Informe seu nome"><br><br> 
+	<label>Email</label><br> 
+	<input type="email" id="Email" placeholder="Informe seu e-mail"><br><br> 	<label>Telefone</label><br> 
+	<input type="number" id="Telefone" placeholder="Informe seu telefone"><br><br> 	<button type="submit">Enviar</button> 
+	</form> 
+</div>
+</main>
+<footer id="rodape"> 
+	<div class="container-rodape"> 
+	<p> 
+	<strong>Autor:</strong> Angelo Dias 
+	</p> 
+	<h6>Angelo Dias 2022 &copy; Todos os direitos reservados.</h6> 	</div> 
+</footer>
+</div>
+</body> 
+</html>

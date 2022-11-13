@@ -1,1 +1,2 @@
 # landing-page
+Desenvolvimento de uma página web Landing Page para a divulgação de pacotes de viagem. A página deve essencialmente conter um formulário com as principais informações do seu potencial Lead (nome, e-mail e telefone). É vedado o uso de ferramentas para a criação de Landing Pages... devendo-se desenvolver uma página do zero, utilizando HTML, CSS e Javascript (se necessário). Não é necessário realizar a lógica para salvar os dados inseridos pelo cliente, se preocupar somente em desenvolver a página web (frontend); conforme as orientações do curso. 
